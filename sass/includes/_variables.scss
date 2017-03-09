@@ -1,0 +1,29 @@
+/* Responsiveness */
+$tablet: 769px !default;
+$desktop: 1000px !default;
+$widescreen: 1192px !default;
+
+/* Colours */
+$black: #000000;
+$white: #ffffff;
+$grey: #aaaaaa;
+$transparent: transparent;
+
+$primary: #67aaf9;
+$secondary: #9bbdf9;
+$tertiary: #b95f89;
+$success: #99cc33;
+$warning: #ffcc00;
+$danger: #ff9966;
+
+/* Typography */
+$font-family: sans-serif;
+$font-size-normal: 16px;
+$line-height-normal: 1.5;
+
+/* Forms */
+$control-border-radius: 2px;
+
+/* Grid */
+$columns: 12;
+$column-gutter: 1rem;

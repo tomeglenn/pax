@@ -1,0 +1,208 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Responsiveness */
+/* Colours */
+/* Typography */
+/* Forms */
+/* Grid */
+/* Responsive Mixins */
+body, p {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold; }
+
+h1 {
+  font-size: 2rem; }
+
+h2 {
+  font-size: 1.6rem; }
+
+h3 {
+  font-size: 1.3rem; }
+
+h4 {
+  font-size: 1.1rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.8rem; }
+
+b, strong {
+  font-weight: bold; }
+
+i, em {
+  font-style: italic; }
+
+u, ins {
+  text-decoration: underline; }
+
+s, del {
+  text-decoration: line-through; }
+
+small {
+  font-size: 0.85rem; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.section {
+  padding: 2rem 1.5rem; }
+
+.container {
+  width: 1000px;
+  margin: auto; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      width: 100%; } }
+  @media only screen and (min-width: 769px) and (max-width: 999px) {
+    .container {
+      width: 769px; } }
+
+.columns {
+  display: flex;
+  margin-left: -1rem;
+  margin-right: -1rem; }
+
+.column {
+  display: block;
+  flex: 1 1 0;
+  margin-left: 1rem;
+  margin-right: 1rem; }
+  .column.is-1 {
+    flex: none;
+    width: 8.33333%; }
+  .column.is-2 {
+    flex: none;
+    width: 16.66667%; }
+  .column.is-3 {
+    flex: none;
+    width: 25%; }
+  .column.is-4 {
+    flex: none;
+    width: 33.33333%; }
+  .column.is-5 {
+    flex: none;
+    width: 41.66667%; }
+  .column.is-6 {
+    flex: none;
+    width: 50%; }
+  .column.is-7 {
+    flex: none;
+    width: 58.33333%; }
+  .column.is-8 {
+    flex: none;
+    width: 66.66667%; }
+  .column.is-9 {
+    flex: none;
+    width: 75%; }
+  .column.is-10 {
+    flex: none;
+    width: 83.33333%; }
+  .column.is-11 {
+    flex: none;
+    width: 91.66667%; }
+  .column.is-12 {
+    flex: none;
+    width: 100%; }
+
+.control, .button {
+  display: inline-flex;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border: 1px solid #aaaaaa;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-decoration: none;
+  cursor: pointer; }
+
+.button {
+  background-color: #ffffff;
+  border-color: #e6e6e6;
+  color: #000000;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px; }
+  .button:hover {
+    background-color: #f2f2f2; }
+  .button.is-primary {
+    background-color: #67aaf9;
+    border-color: #368ff7;
+    color: #ffffff; }
+    .button.is-primary:hover {
+      background-color: #4e9cf8; }
+  .button.is-secondary {
+    background-color: #9bbdf9;
+    border-color: #6b9df6;
+    color: #ffffff; }
+    .button.is-secondary:hover {
+      background-color: #83adf8; }
+  .button.is-tertiary {
+    background-color: #b95f89;
+    border-color: #9f4670;
+    color: #ffffff; }
+    .button.is-tertiary:hover {
+      background-color: #b14d7c; }
+  .button.is-success {
+    background-color: #99cc33;
+    border-color: #7aa329;
+    color: #ffffff; }
+    .button.is-success:hover {
+      background-color: #8ab82e; }
+  .button.is-warning {
+    background-color: #ffcc00;
+    border-color: #cca300;
+    color: #ffffff; }
+    .button.is-warning:hover {
+      background-color: #e6b800; }
+  .button.is-danger {
+    background-color: #ff9966;
+    border-color: #ff7733;
+    color: #ffffff; }
+    .button.is-danger:hover {
+      background-color: #ff884d; }
