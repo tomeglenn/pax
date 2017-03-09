@@ -44,3 +44,8 @@
 }
 
 @include meyer-reset;
+
+// A better box model
+*, *:before, *:after {
+    box-sizing: border-box;
+}

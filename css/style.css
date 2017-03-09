@@ -30,6 +30,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+*, *:before, *:after {
+  box-sizing: border-box; }
+
 /* Responsiveness */
 /* Colours */
 /* Typography */
@@ -107,8 +110,8 @@ small {
 .column {
   display: block;
   flex: 1 1 0;
-  margin-left: 1rem;
-  margin-right: 1rem; }
+  padding-left: 1rem;
+  padding-right: 1rem; }
   .column.is-1 {
     flex: none;
     width: 8.33333%; }
