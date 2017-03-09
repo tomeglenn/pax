@@ -24,8 +24,8 @@
 .column {
   display: block;
   flex: 1 1 0;
-  margin-left: $column-gutter;
-  margin-right: $column-gutter;
+  padding-left: $column-gutter;
+  padding-right: $column-gutter;
 
   @for $i from 1 through $columns {
     &.is-#{$i} {
