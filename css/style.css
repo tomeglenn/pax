@@ -87,7 +87,8 @@ code {
   background: #f5f5f5;
   border: 1px solid #cccccc;
   border-radius: 2px;
-  padding: 2px 5px; }
+  padding: 2px 5px;
+  font-size: 0.9em; }
 
 pre.code {
   font-family: Courier New, Courier, monospace;
@@ -95,6 +96,7 @@ pre.code {
   border: 1px solid #cccccc;
   border-radius: 2px;
   padding: 2px 5px;
+  font-size: 0.9em;
   padding: 5px 10px;
   white-space: pre;
   font-weight: normal; }
@@ -107,6 +109,11 @@ pre.code {
 
 .text-right {
   text-align: right; }
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .section {
   margin-top: 1.5rem;
@@ -139,14 +146,15 @@ hr {
 
 .row {
   width: 100%;
-  margin-right: -0.5rem; }
+  margin-right: -1rem; }
   .row:after {
-    clear: both; }
+    display: table;
+    clear: both;
+    content: ""; }
 
 .column {
   float: left;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem; }
+  padding-right: 1rem; }
   @media only screen and (max-width: 767px) {
     .column {
       float: none;
@@ -200,6 +208,8 @@ hr {
       margin-left: 91.66667%; }
     .column.offset-12 {
       margin-left: 100%; } }
+  .column:last-child {
+    padding-right: 0; }
 
 .control, .button {
   display: inline-flex;

@@ -3,13 +3,20 @@
 	<head>
 		<link rel="stylesheet" href="/css/style.css" />
 		<style>
-			.ex-column { border: 1px solid black; }
+			.ex-column { border: 1px solid #cccccc; background-color: #f5f5f5; margin: 5px 0; padding: 5px; }
+			.title { font-weight: lighter; margin-bottom: -0.5rem; }
 		</style>
 	</head>
 	<body>
 		<div class="section">
+			<div class="container" style="text-align: center">
+				<h1>PAX CSS Framework</h1>
+			</div>
+		</div>
+
+		<div class="section">
 			<div class="container">
-				<h1>Typography</h1>
+				<h1 class="title">Typography</h1>
 				<hr />
 				<div>
 					<h1>h1. Heading 1</h1>
@@ -26,7 +33,7 @@
 
 		<div class="section">
 			<div class="container">
-				<h1>Code</h1>
+				<h1 class="title">Code</h1>
 				<hr />
 				<p>This is an example of inline code <code>var foo = 2</code> in a sentence.</p>
 				<br />
@@ -38,7 +45,7 @@
 
 		<div class="section">
 			<div class="container">
-				<h1>Buttons</h1>
+				<h1 class="title">Buttons</h1>
 				<hr />
 				<div>
 					<button class="button">Default</button>
@@ -53,21 +60,27 @@
 
 		<div class="section">
 			<div class="container">
-				<h1>Grid</h1>
-				<p>The grid has 12 columns and uses <code>display: table</code> for the rows and <code>display: table-cell</code> for the columns.</p>
+				<h1 class="title">Grid</h1>
 				<hr />
 				<div class="row">
-					<div class="column ex-column column-12">.column-12</div>
+					<div class="column column-12"><div class="ex-column">.column-12</div></div>
 				</div>
 				<div class="row">
-					<div class="column ex-column column-2">.column-2</div>
-					<div class="column ex-column column-10">.column-10</div>
+					<div class="column column-2"><div class="ex-column">.column-2</div></div>
+					<div class="column column-10"><div class="ex-column">.column-10</div></div>
 				</div>
 				<div class="row">
-					<div class="column ex-column column-3">.column-3</div>
-					<div class="column ex-column column-3">.column-3</div>
-					<div class="column ex-column column-3">.column-3</div>
-					<div class="column ex-column column-3">.column-3</div>
+					<div class="column column-3"><div class="ex-column">.column-3</div></div>
+					<div class="column column-3"><div class="ex-column">.column-3</div></div>
+					<div class="column column-3"><div class="ex-column">.column-3</div></div>
+					<div class="column column-3"><div class="ex-column">.column-3</div></div>
+				</div>
+				<div class="row">
+					<div class="column column-3 offset-3"><div class="ex-column">.offset-3</div></div>
+					<div class="column column-6"><div class="ex-column">.column-6</div></div>
+				</div>
+				<div class="row">
+					<div class="column column-4 offset-8"><div class="ex-column">.offset-8</div></div>
 				</div>
 			</div>
 		</div>
