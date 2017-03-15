@@ -1,36 +1,69 @@
 .section {
-  padding: 2rem 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .container {
-  width: $desktop;
   margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
   @include mobile-only() {
     width: 100%;
   }
 
-  @include tablet-only() {
+  @include display-from($tablet) {
     width: $tablet;
+  }
+
+  @include display-from($desktop) {
+    width: $desktop;
+  }
+
+  @include display-from($widescreen) {
+    width: $widescreen;
   }
 }
 
-.columns {
-  display: flex;
-  margin-left: -$column-gutter;
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $grey;
+    margin: 1rem 0;
+    padding: 0; 
+}
+
+.row {
+  width: 100%;
   margin-right: -$column-gutter;
+
+  &:after {
+    clear: both;
+  }
 }
 
 .column {
-  display: block;
-  flex: 1 1 0;
+  float: left;
   padding-left: $column-gutter;
   padding-right: $column-gutter;
 
-  @for $i from 1 through $columns {
-    &.is-#{$i} {
-      flex: none;
-      width: ($i / $columns) * 100%;
+  @include mobile-only() {
+    float: none;
+    width: 100%;
+  }
+
+  @include display-from($tablet) {
+    @for $i from 1 through $columns {
+      &.column-#{$i} {
+        width: ($i / $columns) * 100%;
+      }
+    }
+
+    @for $i from 1 through $columns {
+      &.offset-#{$i} {
+        margin-left: ($i / $columns) * 100%;
+      }
     }
   }
 }

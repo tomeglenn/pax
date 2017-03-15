@@ -11,10 +11,6 @@
   @media only screen and (max-width: $tablet - 1px) { @content; }
 }
 
-@mixin from-tablet() {
-  @media only screen and (min-width: $tablet) { @content; }
-}
-
 @mixin tablet-only() {
   @media only screen and (min-width: $tablet) and (max-width: $desktop - 1px) { @content; }
 }

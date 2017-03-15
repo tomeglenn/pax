@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="/css/style.css" />
+		<style>
+			.ex-column { border: 1px solid black; }
+		</style>
 	</head>
 	<body>
 		<div class="section">
@@ -23,24 +26,27 @@
 
 		<div class="section">
 			<div class="container">
+				<h1>Code</h1>
+				<hr />
+				<p>This is an example of inline code <code>var foo = 2</code> in a sentence.</p>
+				<br />
+				<pre class="code">var foo = function () {
+  console.log('Hello, world');
+}</pre>
+			</div>
+		</div>
+
+		<div class="section">
+			<div class="container">
 				<h1>Buttons</h1>
 				<hr />
 				<div>
-					<button class="button">button.button</button>
-					<a href="#" class="button">a.button</a>
-					<input type="button" value="input.button" class="button" />
-				</div>
-				<br />
-				<div>
-					<button class="button is-primary">.is-primary</button>
-					<button class="button is-secondary">.is-secondary</button>
-					<button class="button is-tertiary">.is-tertiary</button>
-				</div>
-				<br />
-				<div>
-					<button class="button is-success">.is-success</button>
-					<button class="button is-warning">.is-warning</button>
-					<button class="button is-danger">.is-danger</button>
+					<button class="button">Default</button>
+					<button class="button is-primary">Primary</button>
+					<button class="button is-success">Success</button>
+					<button class="button is-info">Info</button>
+					<button class="button is-warning">Warning</button>
+					<button class="button is-danger">Danger</button>
 				</div>
 			</div>
 		</div>
@@ -48,18 +54,20 @@
 		<div class="section">
 			<div class="container">
 				<h1>Grid</h1>
+				<p>The grid has 12 columns and uses <code>display: table</code> for the rows and <code>display: table-cell</code> for the columns.</p>
 				<hr />
-				<div class="columns">
-					<div class="column"><div style="background-color: blue;">Column</div></div>
-					<div class="column"><div style="background-color: green;">Column</div></div>
-					<div class="column"><div style="background-color: red;">Column</div></div>
-					<div class="column"><div style="background-color: blue;">Column</div></div>
-					<div class="column"><div style="background-color: green;">Column</div></div>
-					<div class="column"><div style="background-color: red;">Column</div></div>
+				<div class="row">
+					<div class="column ex-column column-12">.column-12</div>
 				</div>
-				<div class="columns">
-					<div class="column is-6"><div style="background-color: blue;">.is-10</div></div>
-					<div class="column is-2"><div style="background-color: green;">.is-2</div></div>
+				<div class="row">
+					<div class="column ex-column column-2">.column-2</div>
+					<div class="column ex-column column-10">.column-10</div>
+				</div>
+				<div class="row">
+					<div class="column ex-column column-3">.column-3</div>
+					<div class="column ex-column column-3">.column-3</div>
+					<div class="column ex-column column-3">.column-3</div>
+					<div class="column ex-column column-3">.column-3</div>
 				</div>
 			</div>
 		</div>

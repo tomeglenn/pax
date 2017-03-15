@@ -2,10 +2,12 @@ body, p {
   font-family: $font-family;
   font-size: $font-size-normal;
   line-height: $line-height-normal;
+  color: $default;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
+  color: $darkest-grey;
 }
 
 h1 {
@@ -50,6 +52,25 @@ s, del {
 
 small {
   font-size: 0.85rem;
+}
+
+@mixin code() {
+  font-family: Courier New, Courier, monospace;
+  background: $light-grey;
+  border: 1px solid $grey;
+  border-radius: 2px;
+  padding: 2px 5px;
+}
+
+code {
+  @include code();
+}
+
+pre.code {
+  @include code();
+  padding: 5px 10px;
+  white-space: pre;
+  font-weight: normal;
 }
 
 .text-left { text-align: left; }

@@ -5,7 +5,7 @@
   padding-bottom: 0;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  border: 1px solid $grey;
+  border: 1px solid;
   font-family: $font-family;
   font-weight: normal;
   font-size: 1rem;
@@ -16,10 +16,10 @@
 
 @mixin button-color($color) {
   background-color: $color;
-  border-color: darken($color, 10%);
+  border-color: darken($color, 20%);
 
   @if $color == $white or $color == $transparent {
-    color: $black;
+    color: $default;
   }
   @else {
     color: $white;
@@ -27,6 +27,10 @@
 
   &:hover {
     background-color: darken($color, 5%);
+  }
+
+  &:focus {
+    background-color: darken($color, 15%);
   }
 }
 
@@ -42,9 +46,8 @@
   @include border-radius($control-border-radius);
 
   &.is-primary { @include button-color($primary); }
-  &.is-secondary { @include button-color($secondary); }
-  &.is-tertiary { @include button-color($tertiary); }
   &.is-success { @include button-color($success); }
+  &.is-info { @include button-color($info); }
   &.is-warning { @include button-color($warning); }
   &.is-danger { @include button-color($danger); }
 }

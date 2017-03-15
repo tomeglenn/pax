@@ -42,10 +42,12 @@ table {
 body, p {
   font-family: sans-serif;
   font-size: 16px;
-  line-height: 1.5; }
+  line-height: 1.5;
+  color: #666666; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold; }
+  font-weight: bold;
+  color: #333333; }
 
 h1 {
   font-size: 2rem; }
@@ -80,6 +82,23 @@ s, del {
 small {
   font-size: 0.85rem; }
 
+code {
+  font-family: Courier New, Courier, monospace;
+  background: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 2px 5px; }
+
+pre.code {
+  font-family: Courier New, Courier, monospace;
+  background: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 2px 5px;
+  padding: 5px 10px;
+  white-space: pre;
+  font-weight: normal; }
+
 .text-left {
   text-align: left; }
 
@@ -90,64 +109,97 @@ small {
   text-align: right; }
 
 .section {
-  padding: 2rem 1.5rem; }
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem; }
 
 .container {
-  width: 1000px;
-  margin: auto; }
-  @media only screen and (max-width: 768px) {
+  margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  @media only screen and (max-width: 767px) {
     .container {
       width: 100%; } }
-  @media only screen and (min-width: 769px) and (max-width: 999px) {
+  @media only screen and (min-width: 768px) {
     .container {
-      width: 769px; } }
+      width: 768px; } }
+  @media only screen and (min-width: 1024px) {
+    .container {
+      width: 1024px; } }
+  @media only screen and (min-width: 1440px) {
+    .container {
+      width: 1440px; } }
 
-.columns {
-  display: flex;
-  margin-left: -1rem;
-  margin-right: -1rem; }
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1rem 0;
+  padding: 0; }
+
+.row {
+  width: 100%;
+  margin-right: -0.5rem; }
+  .row:after {
+    clear: both; }
 
 .column {
-  display: block;
-  flex: 1 1 0;
-  padding-left: 1rem;
-  padding-right: 1rem; }
-  .column.is-1 {
-    flex: none;
-    width: 8.33333%; }
-  .column.is-2 {
-    flex: none;
-    width: 16.66667%; }
-  .column.is-3 {
-    flex: none;
-    width: 25%; }
-  .column.is-4 {
-    flex: none;
-    width: 33.33333%; }
-  .column.is-5 {
-    flex: none;
-    width: 41.66667%; }
-  .column.is-6 {
-    flex: none;
-    width: 50%; }
-  .column.is-7 {
-    flex: none;
-    width: 58.33333%; }
-  .column.is-8 {
-    flex: none;
-    width: 66.66667%; }
-  .column.is-9 {
-    flex: none;
-    width: 75%; }
-  .column.is-10 {
-    flex: none;
-    width: 83.33333%; }
-  .column.is-11 {
-    flex: none;
-    width: 91.66667%; }
-  .column.is-12 {
-    flex: none;
-    width: 100%; }
+  float: left;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
+  @media only screen and (max-width: 767px) {
+    .column {
+      float: none;
+      width: 100%; } }
+  @media only screen and (min-width: 768px) {
+    .column.column-1 {
+      width: 8.33333%; }
+    .column.column-2 {
+      width: 16.66667%; }
+    .column.column-3 {
+      width: 25%; }
+    .column.column-4 {
+      width: 33.33333%; }
+    .column.column-5 {
+      width: 41.66667%; }
+    .column.column-6 {
+      width: 50%; }
+    .column.column-7 {
+      width: 58.33333%; }
+    .column.column-8 {
+      width: 66.66667%; }
+    .column.column-9 {
+      width: 75%; }
+    .column.column-10 {
+      width: 83.33333%; }
+    .column.column-11 {
+      width: 91.66667%; }
+    .column.column-12 {
+      width: 100%; }
+    .column.offset-1 {
+      margin-left: 8.33333%; }
+    .column.offset-2 {
+      margin-left: 16.66667%; }
+    .column.offset-3 {
+      margin-left: 25%; }
+    .column.offset-4 {
+      margin-left: 33.33333%; }
+    .column.offset-5 {
+      margin-left: 41.66667%; }
+    .column.offset-6 {
+      margin-left: 50%; }
+    .column.offset-7 {
+      margin-left: 58.33333%; }
+    .column.offset-8 {
+      margin-left: 66.66667%; }
+    .column.offset-9 {
+      margin-left: 75%; }
+    .column.offset-10 {
+      margin-left: 83.33333%; }
+    .column.offset-11 {
+      margin-left: 91.66667%; }
+    .column.offset-12 {
+      margin-left: 100%; } }
 
 .control, .button {
   display: inline-flex;
@@ -156,7 +208,7 @@ small {
   padding-bottom: 0;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  border: 1px solid #aaaaaa;
+  border: 1px solid;
   font-family: sans-serif;
   font-weight: normal;
   font-size: 1rem;
@@ -166,46 +218,52 @@ small {
 
 .button {
   background-color: #ffffff;
-  border-color: #e6e6e6;
-  color: #000000;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px; }
+  border-color: #cccccc;
+  color: #666666;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px; }
   .button:hover {
     background-color: #f2f2f2; }
+  .button:focus {
+    background-color: #d9d9d9; }
   .button.is-primary {
-    background-color: #67aaf9;
-    border-color: #368ff7;
+    background-color: #3498db;
+    border-color: #196090;
     color: #ffffff; }
     .button.is-primary:hover {
-      background-color: #4e9cf8; }
-  .button.is-secondary {
-    background-color: #9bbdf9;
-    border-color: #6b9df6;
-    color: #ffffff; }
-    .button.is-secondary:hover {
-      background-color: #83adf8; }
-  .button.is-tertiary {
-    background-color: #b95f89;
-    border-color: #9f4670;
-    color: #ffffff; }
-    .button.is-tertiary:hover {
-      background-color: #b14d7c; }
+      background-color: #258cd1; }
+    .button.is-primary:focus {
+      background-color: #1d6fa5; }
   .button.is-success {
-    background-color: #99cc33;
-    border-color: #7aa329;
+    background-color: #2ecc71;
+    border-color: #1b7943;
     color: #ffffff; }
     .button.is-success:hover {
-      background-color: #8ab82e; }
+      background-color: #29b765; }
+    .button.is-success:focus {
+      background-color: #208e4e; }
+  .button.is-info {
+    background-color: #24cabc;
+    border-color: #15736b;
+    color: #ffffff; }
+    .button.is-info:hover {
+      background-color: #20b4a8; }
+    .button.is-info:focus {
+      background-color: #188980; }
   .button.is-warning {
-    background-color: #ffcc00;
-    border-color: #cca300;
+    background-color: #f39c12;
+    border-color: #976008;
     color: #ffffff; }
     .button.is-warning:hover {
-      background-color: #e6b800; }
+      background-color: #e08e0b; }
+    .button.is-warning:focus {
+      background-color: #b06f09; }
   .button.is-danger {
-    background-color: #ff9966;
-    border-color: #ff7733;
+    background-color: #e74c3c;
+    border-color: #a82315;
     color: #ffffff; }
     .button.is-danger:hover {
-      background-color: #ff884d; }
+      background-color: #e43725; }
+    .button.is-danger:focus {
+      background-color: #bf2718; }
